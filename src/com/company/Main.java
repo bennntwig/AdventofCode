@@ -10,6 +10,9 @@ public class Main {
 
     public static void main(String[] args)throws Exception{
 
+    }
+
+    public void day4(){
         int[] Cards = new int[2500];
 
         File file = new File("E:\\Benutzer\\Desktop\\AOC\\AOC4\\Cards.txt");
@@ -21,10 +24,10 @@ public class Main {
             i++;
         }
 
-        for(int j = 0; j < Cards.length; j++){
-            System.out.println(Cards[j]);
-        }
-
+        //vielleicht bingoCard1.fill(Arrays.copyofRanage(Cards, 0, 24)
+        int[] Card1 = Arrays.copyofRange(Cards, 0 , 24);
+        BingoCard bingoCard1 = new BingoCard;
+        bingoCard1.fill(Card1);
     }
 
     @Test
