@@ -2,6 +2,13 @@ package com.company;
 
 public class BingoCard {
     int [][] cardNumbers;
+    boolean [][] cardMarkers;
+
+    for(int i = 0; i < 5; i++){
+        for(int j = 0; j < 5; j++){
+            cardMarkers[i][j] = false;
+        }
+    }
 
     public void fill(int[] numbers){
         cardNumbers[0][0] = numbers[0];
