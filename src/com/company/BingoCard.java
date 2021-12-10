@@ -1,8 +1,8 @@
 package com.company;
 
 public class BingoCard {
-    int [][] cardNumbers;
-    boolean [][] cardMarkers;
+    int [][] cardNumbers = new int[5][5];
+    boolean [][] cardMarkers = new boolean[5][5];
 
     for(int i = 0; i < 5; i++){
         for(int j = 0; j < 5; j++){
