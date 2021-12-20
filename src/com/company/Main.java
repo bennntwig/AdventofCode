@@ -12,8 +12,10 @@ public class Main {
 
     }
 
-    public void day4(){
+    public void day4() throws FileNotFoundException {
         int[] Cards = new int[2500];
+        int[] calledNumbers = {30,35,8,2,39,37,72,7,81,41,25,46,56,18,89,70,0,15,84,75,88,67,42,44,94,71,79,65,58,52,96,83,54,29,14,95,66,61,97,68,57,90,55,32,17,47,20,98,1,69,63,62,31,86,77,85,87,93,26,40,24,19,48,76,73,49,34,45,82,22,80,78,23,6,59,91,64,43,21,51,13,3,53,99,4,28,33,74,12,9,36,50,60,11,27,10,5,16,92,38};
+
 
         File file = new File("E:\\Benutzer\\Desktop\\AOC\\AOC4\\Cards.txt");
         Scanner sc = new Scanner(file);
@@ -24,10 +26,20 @@ public class Main {
             i++;
         }
 
-        //vielleicht bingoCard1.fill(Arrays.copyofRanage(Cards, 0, 24)
-        int[] Card1 = Arrays.copyofRange(Cards, 0 , 24);
-        BingoCard bingoCard1 = new BingoCard;
-        bingoCard1.fill(Card1);
+        BingoCard bingoCard1 = new BingoCard();
+        BingoCard bingoCard2 = new BingoCard();
+        BingoCard bingoCard3 = new BingoCard();
+
+        bingoCard1.fill(Arrays.copyOfRange(Cards, 0, 24));
+        bingoCard2.fill(Arrays.copyOfRange(Cards, 25, 49));
+        bingoCard3.fill(Arrays.copyOfRange(Cards, 50, 74));
+
+        for(int j = 0; j < calledNumbers.length; j++){
+            bingoCard1.markNumber(calledNumbers[j]);
+            if(bingoCard1.hasBingo()){
+
+            }
+        }
     }
 
     @Test
